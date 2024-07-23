@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>GetUserServlet</servlet-name>
+        <servlet-class>servlets.GetUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateUserServlet</servlet-name>
+        <servlet-class>servlets.CreateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetUserServlet</servlet-name>
+        <url-pattern>/GetUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateUserServlet</servlet-name>
+        <url-pattern>/CreateUserServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
