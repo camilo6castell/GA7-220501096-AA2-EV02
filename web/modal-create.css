@@ -1,0 +1,207 @@
+/* Estilos generales para el fondo oscuro */
+.modal-overlay-create {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  display: none; /* Se oculta inicialmente */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegura que esté por encima de todo */
+}
+
+/* Estilos del modal */
+.modal-create {
+  background-color: #222; /* Color de fondo oscuro del modal */
+  color: #fff; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Botón de cerrar el modal */
+.close-modal-create {
+  background-color: #ff4d4d; /* Botón rojo para cerrar */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Estilo para el formulario y etiquetas dentro del modal */
+.modal-create form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-create label {
+  margin-top: 10px;
+}
+
+.modal-create input[type="text"],
+.modal-create input[type="email"],
+.modal-create input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+.modal-create input[type="submit"] {
+  background-color: #28a745; /* Color verde para el botón de enviar */
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.modal-create input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Estilos generales para el fondo oscuro */
+.modal-overlay-update {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  display: none; /* Se oculta inicialmente */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegura que esté por encima de todo */
+}
+
+/* Estilos del modal */
+.modal-update {
+  background-color: #222; /* Color de fondo oscuro del modal */
+  color: #fff; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Botón de cerrar el modal */
+.close-modal-update {
+  background-color: #ff4d4d; /* Botón rojo para cerrar */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Estilo para el formulario y etiquetas dentro del modal */
+.modal-update form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-update label {
+  margin-top: 10px;
+}
+
+.modal-update input[type="text"],
+.modal-update input[type="email"],
+.modal-update input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+.modal-update input[type="submit"] {
+  background-color: #28a745; /* Color verde para el botón de enviar */
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.modal-update input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Estilos generales para el fondo oscuro */
+.modal-overlay-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  display: none; /* Se oculta inicialmente */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Asegura que esté por encima de todo */
+}
+
+/* Estilos del modal */
+.modal-delete {
+  background-color: #222; /* Color de fondo oscuro del modal */
+  color: #fff; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Botón de cerrar el modal */
+.close-modal-delete {
+  background-color: #ff4d4d; /* Botón rojo para cerrar */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Estilo para el formulario y etiquetas dentro del modal */
+.modal-delete form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-delete label {
+  margin-top: 10px;
+}
+
+.modal-delete input[type="text"],
+.modal-delete input[type="email"],
+.modal-delete input[type="submit"] {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: white;
+}
+
+.modal-delete input[type="submit"] {
+  background-color: #28a745; /* Color verde para el botón de enviar */
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.modal-delete input[type="submit"]:hover {
+  background-color: #218838;
+}
