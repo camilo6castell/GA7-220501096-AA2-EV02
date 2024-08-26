@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+  <%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,7 +28,7 @@
             <h1>Gestión de Contactos</h1>
 
             <div class="contacts-container">
-              <c:if test="${not empty contacts}">
+              <c:if test="${not empty users}">
                 <table border="1" class="contact-list">
                   <thead>
                     <tr>
@@ -37,11 +38,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <c:forEach var="contact" items="${contacts}">
+                    <c:forEach var="user" items="${users}">
                       <tr>
-                        <td>${contact.userId}</td>
-                        <td>${contact.username}</td>
-                        <td>${contact.publicKey}</td>
+                        <td>${user.userId}</td>
+                        <td>${user.username}</td>
+                        <td>${user.publicKey}</td>
                       </tr>
                     </c:forEach>
                   </tbody>
@@ -52,7 +53,7 @@
             <div class="buttons-container">
               <form action="EditContactListServlet" method="GET">
                 <input type="hidden" name="action" value="read" />
-                <input type="submit" value="Read contacts" />
+                <input id="readContactsButton" type="submit" value="Read contacts" />
               </form>
               <button class="open-create-modal-button">Create contact</button>
               <button class="open-update-modal-button">Update contact</button>
@@ -68,7 +69,7 @@
                   <label for="username">Nombre:</label>
                   <input type="text" id="username" name="username" required />
                   <br />
-                  <label for="publicKey">Teléfono:</label>
+                  <label for="publicKey">Public key:</label>
                   <input type="text" id="publicKey" name="publicKey" required />
                   <br />
                   <input type="submit" value="Crear" />
@@ -86,13 +87,13 @@
                 <form action="EditContactListServlet" method="POST">
                   <input type="hidden" name="action" value="update" />
                   <label for="idUpdate">ID del Contacto:</label>
-                  <input type="text" id="idUpdate" name="id" required />
+                  <input type="text" id="idUpdate" name="idUpdate" required />
                   <br />
                   <label for="usernameUpdate">Nuevo Nombre:</label>
-                  <input type="text" id="usernameUpdate" name="name" />
+                  <input type="text" id="usernameUpdate" name="usernameUpdate" />
                   <br />
-                  <label for="publicKeyUpdate">Nuevo Teléfono:</label>
-                  <input type="text" id="publicKeyUpdate" name="phone" />
+                  <label for="publicKeyUpdate">Nueva public Key:</label>
+                  <input type="text" id="publicKeyUpdate" name="publicKeyUpdate" />
                   <br />
                   <input type="submit" value="Actualizar" />
                   <button type="button" class="close-modal-update">
@@ -109,7 +110,7 @@
                 <form action="EditContactListServlet" method="POST">
                   <input type="hidden" name="action" value="delete" />
                   <label for="idDelete">ID del Contacto a Borrar:</label>
-                  <input type="text" id="idDelete" name="id" required />
+                  <input type="text" id="idDelete" name="idDelete" required />
                   <br />
                   <input type="submit" value="Borrar" />
                   <button type="button" class="close-modal-delete">

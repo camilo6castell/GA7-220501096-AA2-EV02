@@ -18,8 +18,11 @@ public class MyConnection {
         String url = sjdbc + "://" + host + ":" + port + "/" + db;
 
         Connection myConnection = null;
-     
+
         try {
+
+            // Registrar el driver
+            Class.forName("org.mariadb.jdbc.Driver");
 
             myConnection = DriverManager.getConnection(
                     url, user, pass
@@ -29,13 +32,15 @@ public class MyConnection {
                 System.out.println("Conexión con la db establecida");
             }
 
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error al cargar el driver de MariaDB: " + e.getMessage());
         } catch (SQLException e) {
             System.out.println(
                     "Error, no se ha podido conectar "
                     + "a la base de datos: " + e.getMessage()
             );
         }
-        
+
         return myConnection;
     }
 

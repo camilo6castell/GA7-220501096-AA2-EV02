@@ -1,3 +1,17 @@
+//$(document).ready(function() {
+//    $("#readContactsButton").click(function() {
+//        $.ajax({
+//            url: "EditContactListServlet",
+//            data: { action: "read" },
+//            success: function(response) {
+//                // Actualizar el contenido de la tabla con la respuesta del servidor
+//                $(".contacts-container").html(response);
+//            }
+//        });
+//    });
+//});
+
+
 // Esperar a que el DOM cargue
 document.addEventListener("DOMContentLoaded", function () {
   // Función para abrir el modal
