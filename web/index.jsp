@@ -33,17 +33,15 @@
                     <tr>
                       <th>ID</th>
                       <th>Nombre</th>
-                      <th>Teléfono</th>
-                      <th>Correo</th>
+                      <th>Clave pública</th>
                     </tr>
                   </thead>
                   <tbody>
                     <c:forEach var="contact" items="${contacts}">
                       <tr>
-                        <td>${contact.id}</td>
-                        <td>${contact.name}</td>
-                        <td>${contact.phone}</td>
-                        <td>${contact.email}</td>
+                        <td>${contact.userId}</td>
+                        <td>${contact.username}</td>
+                        <td>${contact.publicKey}</td>
                       </tr>
                     </c:forEach>
                   </tbody>
@@ -52,7 +50,7 @@
             </div>
 
             <div class="buttons-container">
-              <form action="ContactServlet" method="GET">
+              <form action="EditContactListServlet" method="GET">
                 <input type="hidden" name="action" value="read" />
                 <input type="submit" value="Read contacts" />
               </form>
@@ -65,16 +63,13 @@
             <div class="modal-overlay-create">
               <div class="modal-create">
                 <h2>Crear Contacto</h2>
-                <form action="ContactServlet" method="POST">
+                <form action="EditContactListServlet" method="POST">
                   <input type="hidden" name="action" value="create" />
-                  <label for="name">Nombre:</label>
-                  <input type="text" id="name" name="name" required />
+                  <label for="username">Nombre:</label>
+                  <input type="text" id="username" name="username" required />
                   <br />
-                  <label for="phone">Teléfono:</label>
-                  <input type="text" id="phone" name="phone" required />
-                  <br />
-                  <label for="email">Correo:</label>
-                  <input type="email" id="email" name="email" />
+                  <label for="publicKey">Teléfono:</label>
+                  <input type="text" id="publicKey" name="publicKey" required />
                   <br />
                   <input type="submit" value="Crear" />
                   <button type="button" class="close-modal-create">
@@ -88,19 +83,16 @@
             <div class="modal-overlay-update">
               <div class="modal-update">
                 <h2>Actualizar Contacto</h2>
-                <form action="ContactServlet" method="POST">
+                <form action="EditContactListServlet" method="POST">
                   <input type="hidden" name="action" value="update" />
                   <label for="idUpdate">ID del Contacto:</label>
                   <input type="text" id="idUpdate" name="id" required />
                   <br />
-                  <label for="nameUpdate">Nuevo Nombre:</label>
-                  <input type="text" id="nameUpdate" name="name" />
+                  <label for="usernameUpdate">Nuevo Nombre:</label>
+                  <input type="text" id="usernameUpdate" name="name" />
                   <br />
-                  <label for="phoneUpdate">Nuevo Teléfono:</label>
-                  <input type="text" id="phoneUpdate" name="phone" />
-                  <br />
-                  <label for="emailUpdate">Nuevo Correo:</label>
-                  <input type="email" id="emailUpdate" name="email" />
+                  <label for="publicKeyUpdate">Nuevo Teléfono:</label>
+                  <input type="text" id="publicKeyUpdate" name="phone" />
                   <br />
                   <input type="submit" value="Actualizar" />
                   <button type="button" class="close-modal-update">
@@ -114,7 +106,7 @@
               <div class="modal-delete">
                 <!-- Borrar Contacto -->
                 <h2>Borrar Contacto</h2>
-                <form action="ContactServlet" method="POST">
+                <form action="EditContactListServlet" method="POST">
                   <input type="hidden" name="action" value="delete" />
                   <label for="idDelete">ID del Contacto a Borrar:</label>
                   <input type="text" id="idDelete" name="id" required />
@@ -126,24 +118,7 @@
                 </form>
               </div>
             </div>
-
-            <!-- <div class="container__form">
-              <form action="login.php" method="post" class="login-form">
-                <div>
-
-                </div>
-                <fieldset class="login-form__body">
-                  <legend class="login-form__title">Edit contact list</legend>
-
-
-                  <div class="login-form__button-container">
-                    <button class="login-form__button" type="submit">
-                      Iniciar sesión
-                    </button>
-                  </div>
-                </fieldset>
-              </form>
-            </div> -->
+            
           </div>
         </div>
         <div class="main-section__presentation">

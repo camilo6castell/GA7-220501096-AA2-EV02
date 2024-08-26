@@ -12,6 +12,12 @@ public class User {
     private String publicKey;
     private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
 
+    public User(int userId, String username, String publicKey) {
+        this.userId = Long.valueOf(userId);
+        this.username = username;
+        this.publicKey = publicKey;
+    }
+    
     // Getters and setters
 
     public Long getUserId() {

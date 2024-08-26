@@ -12,20 +12,13 @@ public class MyConnection {
         String host = "127.0.0.1";
         String port = "3306";
         String db = "cryptomessage";
-        String user = "r4d3o";
-        String pass = "r4d3o";
+        String user = "test";
+        String pass = "test";
 
         String url = sjdbc + "://" + host + ":" + port + "/" + db;
 
         Connection myConnection = null;
      
-//        This causes errors
-//        try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-
         try {
 
             myConnection = DriverManager.getConnection(
